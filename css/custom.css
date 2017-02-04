@@ -57,7 +57,23 @@
   color: #555;
 }
 
+
+/*Carousel Responsiveness*/
+
+#mycarousel
+{
+  width: 100%;
+  margin: 0 auto;
+  }
+
+
 @media screen and (min-width: 768px) {
+
+  #mycarousel
+{
+  width: 70%;
+  margin: 0 auto;
+  }
 
   .section-white {
      padding: 1.5em 0;
@@ -72,3 +88,4 @@
   }
 
 }
+
