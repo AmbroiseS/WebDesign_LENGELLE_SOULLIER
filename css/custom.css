@@ -71,12 +71,12 @@
 
   #mycarousel
 {
-  width: 70%;
+  width: 60%;
   margin: 0 auto;
   }
 
   .section-white {
-     padding: 1.5em 0;
+    padding: 1.5em 0;
   }
 
 }
@@ -84,8 +84,13 @@
 @media screen and (min-width: 992px) {
 
   .container {
-    max-width: 930px;
-  }
+    max-width: 90%;
+     }
 
+}
+
+#container_title
+{
+text-align: center;
 }
 

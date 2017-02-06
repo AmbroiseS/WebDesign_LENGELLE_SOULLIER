@@ -21,7 +21,7 @@
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="Home.html">Cycle à Paris</a>
+				<a class="navbar-brand" href="Home.html" >Cycle à Paris</a>
 			</div>
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="Home.html">Home</a></li>
@@ -31,70 +31,162 @@
 		</div>
 	</nav>
 
-	<div class="container">
-		<h1>Les Voies Cyclables à Paris</h1>
 
 
-		<p>Some BS about bike roads</p> 
-		<p>Also better pics</p> 
-	</div>
+	<!--<div id='content' class='row-fluid'>
+		<div class='span2 sidebar'>
+			<h3>Left Sidebar</h3>
+			<ul class="nav nav-tabs nav-stacked">
+				<li><a href='#'>Another Link 1</a></li>
+				<li><a href='#'>Another Link 2</a></li>
+				<li><a href='#'>Another Link 3</a></li>
+			</ul>
+		</div>
+		<div class='span10 main'> -->
+			<div class="row">
+				<div class="col-lg-2">
+					<div class="row">
+						<aside class="col-lg-12">
+							<body>
+								<div class="container">      
+									<div id="html">
+										<button data-toggle="modal" data-backdrop="false" href="#formulaire" class="btn btn-primary">S'inscrire à la NewsLetter</button>
+									</div>
+									<div class="modal fade" id="formulaire">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal">x</button>
+													<h4 class="modal-title">Vos infos :</h4>
+												</div>
+												<div class="modal-body">
+													<form action="test.php">
+														<div class="form-group">
+															<label for="nom">Nom</label>
+															<input type="text" class="form-control" name ="nom" id="nom" placeholder="Votre nom">
+														</div>
+														<div class="form-group">
+															<label for="email">Email</label>
+															<input type="email" class="form-control" name="email" id="email" placeholder="Votre Email">
+														</div>
+														<button type="submit" class="btn btn-default">Envoyer</button>
+													</form>
+												</div>
+												<div class="modal-footer">
+													<button class="btn btn-info" data-dismiss="modal">Annuler</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 
-
-	<!--Carousel -->
-
-	<section class="section-white">
-		<div class="container" >
-
-			<div id="mycarousel" class="carousel slide" data-ride="carousel">
-				<!-- Indicators -->
-				<ol class="carousel-indicators">
-					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-					<li data-target="#carousel-example-generic" data-slide-to="3"></li>
-				</ol>
-
-				<!-- Wrapper for slides -->
-				<div class="carousel-inner">
-					<div class="item active">
-						<img src="Ressources/pictures/piste_cyclables/image1.jpg" alt="...">
-						<div class="carousel-caption">
-							<h4>Piste Cyclable</h4>
-						</div>
-					</div>
-					<div class="item">
-						<img src="Ressources/pictures/piste_cyclables/image2.jpg" alt="...">
-						<div class="carousel-caption">
-							<h4>Voie Verte</h4>
-						</div>
-					</div>
-					<div class="item">
-						<img src="Ressources/pictures/piste_cyclables/image3.jpg" alt="...">
-						<div class="carousel-caption">
-							<h4>Voie Partagée</h4>
-						</div>
-					</div>
-					<div class="item">
-						<img src="Ressources/pictures/piste_cyclables/image4.jpg" alt="...">
-						<div class="carousel-caption">
-							<h4>Piste Cyclable Séparée</h4>
-						</div>
+								<script>
+									$(function(){
+										$("form").submit(function(e) {
+											e.preventDefault();
+											var $form = $(this);
+											$.post($form.attr("action"), $form.serialize())
+											.done(function(data) {
+												$("#html").html(data);
+												$("#formulaire").modal("hide"); 
+											})
+											.fail(function() {
+												alert("Erreur, vérifier les Informations");
+											});
+										});
+									});
+								</script>
+							</body>
+						</aside>
 					</div>
 				</div>
 
-				<!-- Controls -->
-				<a class="left carousel-control" href="#mycarousel" data-slide="prev">
-					<span class="glyphicon glyphicon-chevron-left"></span>
-				</a>
-				<a class="right carousel-control" href="#mycarousel" data-slide="next">
-					<span class="glyphicon glyphicon-chevron-right"></span>
-				</a>
-			</div>
+				<section class="col-lg-8">
 
-		</div>
-	</section>
+					<div id="container_title">
+						<h1>Les Voies Cyclables à Paris</h1>
 
 
+						<p>Some BS about bike roads</p> 
+						<p>Also better pics</p> 
+					</div>
+				</div>
 
-</body>
-</html>
+
+
+
+				<div class="row">
+					<div class="col-lg-2">
+					</div>
+
+
+
+					<section class="col-lg-8">
+						<!--Carousel -->
+
+						<section class="section-white">
+							<div class="container" >
+
+								<div id="mycarousel" class="carousel slide" data-ride="carousel">
+									<!-- Indicators -->
+									<ol class="carousel-indicators">
+										<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+										<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+										<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+										<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+									</ol>
+
+									<!-- Wrapper for slides -->
+									<div class="carousel-inner">
+										<div class="item active">
+											<img src="Ressources/pictures/piste_cyclables/image1.jpg" alt="...">
+											<div class="carousel-caption">
+												<h4>Piste Cyclable</h4>
+											</div>
+										</div>
+										<div class="item">
+											<img src="Ressources/pictures/piste_cyclables/image2.jpg" alt="...">
+											<div class="carousel-caption">
+												<h4>Voie Verte</h4>
+											</div>
+										</div>
+										<div class="item">
+											<img src="Ressources/pictures/piste_cyclables/image3.jpg" alt="...">
+											<div class="carousel-caption">
+												<h4>Voie Partagée</h4>
+											</div>
+										</div>
+										<div class="item">
+											<img src="Ressources/pictures/piste_cyclables/image4.jpg" alt="...">
+											<div class="carousel-caption">
+												<h4>Piste Cyclable Séparée</h4>
+											</div>
+										</div>
+									</div>
+
+									<!-- Controls -->
+									<a class="left carousel-control" href="#mycarousel" data-slide="prev">
+										<span class="glyphicon glyphicon-chevron-left"></span>
+									</a>
+									<a class="right carousel-control" href="#mycarousel" data-slide="next">
+										<span class="glyphicon glyphicon-chevron-right"></span>
+									</a>
+								</div>
+
+							</div>
+						</section>
+
+
+					</section>
+
+				</div>
+
+
+
+
+
+			</body>
+
+
+
+			</html>
