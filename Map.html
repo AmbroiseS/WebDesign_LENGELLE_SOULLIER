@@ -25,15 +25,29 @@
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 
-			<div class="navbar-header">
-				<a href="home.html" class="navbar-brand" id="logo"><img src="https://cdn.pixabay.com/photo/2012/04/24/18/13/bicycle-40756_1280.png" height="30px"</a>	
-				<a class="navbar-brand" href="Home.html">Cycle à Paris</a>
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header page-scroll">
+			<a href="home.html" class="navbar-brand" id="logo"><img src="https://cdn.pixabay.com/photo/2012/04/24/18/13/bicycle-40756_1280.png" height="30px"</a>
+				<a class="navbar-brand" href="Home.html" >Cycle à Paris</a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				
 			</div>
-			<ul class="nav navbar-nav" id="center">
-				<li ><a href="Home.html">Accueil</a></li>
-				<li class="active"><a href="Map.html">Carte</a></li>
-				<li><a href="Stats.html">Statistiques</a></li>
-			</ul>
+
+
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+				<ul class="nav navbar-nav navbar-right" id="center">
+					<li class="hidden active"><a href="#page-top"></a></li>
+					<li  class="page-scroll"><a href="Home.html">Accueil</a></li>
+					<li class=" active page-scroll"> <a href="Map.html">Carte</a></li>
+					<li class="page-scroll"><a href="Stats.html">Statistiques</a></li>
+				</ul>
+			</div>
 		</div>
 	</nav>
 
@@ -48,10 +62,12 @@
 
 			</div>
 		</div>
-
+		<div class="col-lg-2"></div>
 
 	</div>
 
+
+<br ></br>
 
 
 	<!-- Map Integration -->
