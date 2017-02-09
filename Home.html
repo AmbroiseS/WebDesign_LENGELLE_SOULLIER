@@ -10,7 +10,9 @@
 	<link rel="stylesheet" type="text/css" href="css/custom.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 
 
@@ -21,15 +23,27 @@
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
+				<a href="home.html" class="navbar-brand" id="logo"><img src="https://cdn.pixabay.com/photo/2012/04/24/18/13/bicycle-40756_1280.png" height="30px"</a>
 				<a class="navbar-brand" href="Home.html" >Cycle à Paris</a>
 			</div>
-			<ul class="nav navbar-nav">
+
+			<ul class="nav navbar-nav" id="center">
 				<li class="active"><a href="Home.html">Home</a></li>
 				<li><a href="Map.html">Carte</a></li>
 				<li><a href="Stats.html">Statistiques</a></li>
 			</ul>
 		</div>
 	</nav>
+
+
+	<!--<div ng-app="myApp" ng-controller="MainCtrl">
+		
+		<h1>Hello, {{name}} !</h1>
+		<input type="text" ng-model="name"/>
+		<script type="text/javascript" src="js/basic.js"></script>
+	</div>  -->
+
+	
 
 
 
@@ -113,33 +127,14 @@
 
 			<section class="col-lg-8">
 
-				<div id="container_title">
+				<div class="container_title">
 					<h1>Les Voies Cyclables à Paris</h1>
 
 
-					<p>Some BS about bike roads</p> 
-					<p>Also better pics</p> 
+					<p>      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor justo nibh, id lacinia nisl faucibus non. Quisque eros enim, cursus id orci vitae, volutpat euismod turpis. Aliquam elementum sem eget condimentum dictum. Nam posuere neque consequat porta aliquam. Donec tristique sem nec velit ullamcorper placerat. Aenean et nibh placerat mi interdum sagittis sagittis eget purus. Pellentesque tempus eleifend lorem at venenatis. Aenean enim libero, commodo ut blandit in, sagittis at enim. Maecenas eu diam nec nunc scelerisque aliquam in ac risus. Fusce sodales, dui at tincidunt vehicula, nisl felis condimentum massa, non sagittis justo justo vitae felis. Cras feugiat a metus et interdum. In hac habitasse platea dictumst. Nulla fermentum tellus ante, iaculis placerat tellus ultricies ornare. In mattis laoreet bibendum.</p> 
+
+
 				</div>
-
-			</section>
-
-
-		</div>
-
-
-
-
-
-
-
-		<div class="row">
-
-			<div class="col-lg-2">
-			</div>
-
-
-			<section class="col-lg-8">
-				<!--Carousel -->
 
 				<section class="section-white">
 					<div class="container" >
@@ -190,13 +185,33 @@
 							</a>
 						</div>
 
-					</div>
-				</section>
 
+
+
+					</section>
+
+					
+					
+
+					<p>		Quisque sit amet eros pulvinar, tempor leo a, porttitor magna. Donec malesuada a est sit amet vestibulum. In aliquet pellentesque lorem ac ultrices. Quisque id mi justo. In libero elit, rutrum sit amet quam quis, tempus viverra purus. Nullam ultricies pretium arcu id luctus. Cras congue sem quis lacus hendrerit dictum. Vivamus scelerisque enim id aliquam viverra. Sed vitae ante placerat, elementum velit at, vulputate felis. Vestibulum vel lobortis nisl. Duis vitae luctus metus, a condimentum est. Proin vitae dignissim ante. Praesent quis elit eu augue auctor hendrerit sollicitudin in augue.</p> 
+
+					<p>		Sed enim lectus, lacinia at sem ac, cursus ornare ipsum. Praesent nec tincidunt mauris, in auctor ipsum. Curabitur sollicitudin porta neque. Vestibulum felis enim, faucibus ut ante nec, fermentum venenatis nulla. Integer tempus facilisis diam ut fermentum. Maecenas ullamcorper posuere libero, malesuada dignissim sapien rhoncus vel. Donec facilisis arcu ut est venenatis volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum eget egestas nunc. Sed vel convallis massa. Vivamus vitae condimentum arcu, ac sagittis dui.</p> 
+
+					<p>		Donec dictum, lacus vel luctus consequat, nibh neque interdum risus, quis condimentum nunc ante eu felis. Fusce dui diam, porta eget felis ac, ullamcorper dictum ligula. Etiam semper laoreet sapien sit amet tempor. Pellentesque a aliquet lectus. Vivamus sapien lorem, convallis vitae ornare imperdiet, sodales id eros. Mauris et dolor a orci facilisis malesuada et non elit. Nunc dui tortor, pulvinar vel rutrum ut, tristique nec ex. Suspendisse eget hendrerit neque.</p> 
+
+					<p>		Quisque sagittis placerat lobortis. Mauris ultricies commodo lacus id convallis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus in est in velit congue mattis. Etiam sed orci at lectus egestas placerat. Cras nec tellus iaculis, imperdiet lacus ut, efficitur arcu. Quisque tincidunt tincidunt purus, dignissim auctor erat scelerisque eu. Aliquam consequat tristique turpis, at fringilla quam tincidunt nec. Ut vel dapibus est. In vel nisl eu diam vehicula sagittis dignissim id nisi.</p> 
+					<p>Also better pics</p> 
+				</div>
+				
 
 			</section>
 
+
 		</div>
+
+
+
+
 
 	</body>
 
