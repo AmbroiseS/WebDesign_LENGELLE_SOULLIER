@@ -8,6 +8,9 @@
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	<link rel="stylesheet" type="text/css" href="css/material_switch.css">
+	
+
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -26,25 +29,83 @@
 				<a class="navbar-brand" href="Home.html">Cycle à Paris</a>
 			</div>
 			<ul class="nav navbar-nav" id="center">
-				<li ><a href="Home.html">Home</a></li>
+				<li ><a href="Home.html">Accueil</a></li>
 				<li class="active"><a href="Map.html">Carte</a></li>
 				<li><a href="Stats.html">Statistiques</a></li>
 			</ul>
 		</div>
 	</nav>
 
-	<div id="container_title">
+	<div class="container_title">
 		<h1>Les Voies Cyclables à Paris</h1>
 
-
-		<p>This is some text.</p> 
+			<p>      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor justo nibh, id lacinia nisl faucibus non. Quisque eros enim, cursus id orci vitae, volutpat euismod turpis. Aliquam elementum sem eget condimentum dictum. Nam posuere neque consequat porta aliquam. Donec tristique sem nec velit ullamcorper placerat. Aenean et nibh placerat mi interdum sagittis sagittis eget purus. Pellentesque tempus eleifend lorem at venenatis. Aenean enim libero, commodo ut blandit in, sagittis at enim. Maecenas eu diam nec nunc scelerisque aliquam in ac risus. Fusce sodales, dui at tincidunt vehicula, nisl felis condimentum massa, non sagittis justo justo vitae felis. Cras feugiat a metus et interdum. In hac habitasse platea dictumst. Nulla fermentum tellus ante, iaculis placerat tellus ultricies ornare. In mattis laoreet bibendum.</p> 
+ 
 	</div>
 
 
 	<!-- Map Integration -->
 
 	<div class="row">
-		<div class="col-md-3"></div>
+		<div class="col-md-3">
+
+
+
+
+
+
+			<!-- Default panel contents -->
+			<div class="panel-heading">Material Design Switch Demos</div>
+
+			<!-- List group -->
+			<ul class="list-group">
+				<li class="list-group-item">
+					Bootstrap Switch Default
+					<div class="material-switch pull-right">
+						<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+						<label for="someSwitchOptionDefault" class="label-default"></label>
+					</div>
+				</li>
+				<li class="list-group-item">
+					Bootstrap Switch Primary
+					<div class="material-switch pull-right">
+						<input id="someSwitchOptionPrimary" name="someSwitchOption001" type="checkbox"/>
+						<label for="someSwitchOptionPrimary" class="label-primary"></label>
+					</div>
+				</li>
+				<li class="list-group-item">
+					Bootstrap Switch Success
+					<div class="material-switch pull-right">
+						<input id="someSwitchOptionSuccess" name="someSwitchOption001" type="checkbox"/>
+						<label for="someSwitchOptionSuccess" class="label-success"></label>
+					</div>
+				</li>
+				<li class="list-group-item">
+					Bootstrap Switch Info
+					<div class="material-switch pull-right">
+						<input id="someSwitchOptionInfo" name="someSwitchOption001" type="checkbox"/>
+						<label for="someSwitchOptionInfo" class="label-info"></label>
+					</div>
+				</li>
+				<li class="list-group-item">
+					Bootstrap Switch Warning
+					<div class="material-switch pull-right">
+						<input id="someSwitchOptionWarning" name="someSwitchOption001" type="checkbox"/>
+						<label for="someSwitchOptionWarning" class="label-warning"></label>
+					</div>
+				</li>
+				<li class="list-group-item">
+					Bootstrap Switch Danger
+					<div class="material-switch pull-right">
+						<input id="someSwitchOptionDanger" name="someSwitchOption001" type="checkbox"/>
+						<label for="someSwitchOptionDanger" class="label-danger"></label>
+					</div>
+				</li>
+			</ul>
+			
+			
+
+		</div>
 
 		<div class="col-md-6">
 			<iframe src="https://opendata.paris.fr/explore/embed/dataset/reseau-cyclable/map/?disjunctive.arrdt&disjunctive.statut&disjunctive.typologie&disjunctive.sens_velo&location=12,48.86042,2.35348&static=false&datasetcard=false" width="100%"" height="350" frameborder="0"></iframe>
