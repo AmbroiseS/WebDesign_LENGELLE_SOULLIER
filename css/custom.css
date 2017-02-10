@@ -1,9 +1,4 @@
 
-.container_title
-{
-  text-align: center;
-}
-
 /*buttons*/
 #dropDownButton
 {
@@ -15,31 +10,23 @@
   margin: 0 20px;
 }
 .customSize {
-    width: 100px !important;
+    width: 120px !important;
 }
 
 
-/*NavBar settings*/
-.container-fluid
-{
-  text-align: right;
-}
-
-#center
-{
- display: inline-block;
- left: 0;
- right: 0;
- margin:0;
- float:none;
-
-}
-
+/*NavBar */
 #logo
 {
   filter: invert(100%);
 }
+.navbar-toggle span
+{
+  text-align: right;
+}
 
+
+
+/*Else*/
 
 p
 {
@@ -49,4 +36,9 @@ p
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+}
+
+.container_title
+{
+  text-align: center;
 }
