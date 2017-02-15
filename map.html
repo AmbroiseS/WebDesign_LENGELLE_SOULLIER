@@ -19,7 +19,7 @@
 
 
 
-<body>
+<body ng-app="mapApp">
 
 	<!--NavBar -->
 	<nav class="navbar navbar-inverse">
@@ -27,7 +27,7 @@
 
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header page-scroll">
-			<a href="index.html" class="navbar-brand" id="logo"><img src="ressources/pictures/logo/logo2.png" height="27px"</a>
+				<a href="index.html" class="navbar-brand" id="logo"><img src="ressources/pictures/logo/logo2.png" height="27px"</a>
 				<a class="navbar-brand" href="index.html" >Cycle à Paris</a>
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 					<span class="sr-only">Toggle navigation</span>
@@ -60,6 +60,9 @@
 
 				<p>      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor justo nibh, id lacinia nisl faucibus non. Quisque eros enim, cursus id orci vitae, volutpat euismod turpis. Aliquam elementum sem eget condimentum dictum. Nam posuere neque consequat porta aliquam. Donec tristique sem nec velit ullamcorper placerat. Aenean et nibh placerat mi interdum sagittis sagittis eget purus. Pellentesque tempus eleifend lorem at venenatis. Aenean enim libero, commodo ut blandit in, sagittis at enim. Maecenas eu diam nec nunc scelerisque aliquam in ac risus. Fusce sodales, dui at tincidunt vehicula, nisl felis condimentum massa, non sagittis justo justo vitae felis. Cras feugiat a metus et interdum. In hac habitasse platea dictumst. Nulla fermentum tellus ante, iaculis placerat tellus ultricies ornare. In mattis laoreet bibendum.</p> 
 
+				<p> TODO add button reset</p> 
+				<p> add buton center</p> 
+
 			</div>
 		</div>
 		<div class="col-lg-2"></div>
@@ -67,7 +70,7 @@
 	</div>
 
 
-<br ></br>
+	<br ></br>
 
 
 	<!-- Map Integration -->
@@ -132,7 +135,12 @@
 			<iframe src="https://opendata.paris.fr/explore/embed/dataset/reseau-cyclable/map/?disjunctive.arrdt&disjunctive.statut&disjunctive.typologie&disjunctive.sens_velo&location=12,48.86042,2.35348&static=false&datasetcard=false" width="100%"" height="350" frameborder="0"></iframe>
 		</div>
 
-		<div class="col-md-3"></div>
+		<div class="col-md-3" ng-controller="ardFilter">
+			
+			<p>Choisir Arrondissement: 
+				<input type="number" min="1" max="20" ng-model="ard">
+			</p>
+		</div>
 	</div>
 
 
