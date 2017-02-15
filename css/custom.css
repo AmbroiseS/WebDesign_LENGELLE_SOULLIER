@@ -10,7 +10,7 @@
   margin: 0 20px;
 }
 .customSize {
-    width: 120px !important;
+  width: 120px !important;
 }
 
 
@@ -34,11 +34,17 @@ p
 }
 
 html, body {
-    max-width: 100%;
-    overflow-x: hidden;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .container_title
 {
   text-align: center;
 }
+
+iframe
+{
+ margin-bottom: 30px;
+}
+
