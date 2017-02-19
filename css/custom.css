@@ -48,3 +48,8 @@ iframe
  margin-bottom: 30px;
 }
 
+/*input filter*/
+#form-ard
+{
+  width: 70px !important;
+}

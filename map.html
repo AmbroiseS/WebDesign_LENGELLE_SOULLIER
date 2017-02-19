@@ -113,9 +113,13 @@
 
 		<div class="col-md-3" >
 			
-			<p>Choisir Arrondissement: 
-				<input name="ard" type="number" min="1" max="20" ng-minlength="1" ng-maxlength="20" ng-model="ard">
-			</p>
+			<form class="form-inline">Arrondissement: 
+				<input id="form-ard" class="form-control" name="ard" type="number" min="1" max="20" ng-minlength="1" ng-maxlength="20" ng-model="ard">
+				<button type="button" class="btn btn-default" ng-click="resetArd()">
+					<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+				</button>
+			</form>
+			
 		</div>
 	</div>
 

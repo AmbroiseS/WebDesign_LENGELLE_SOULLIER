@@ -6,21 +6,30 @@ var switcher=0;
 
 
 app1.controller("switchButtons",['$scope', function($scope){
-	
-	$scope.enableZoom= function(){
-			
-		if (switcher===1) {
-			document.getElementById('frameMap').src=updateUrl(document.getElementById('frameMap').src,'static','true');
-		} else{
-			document.getElementById('frameMap').src=updateUrl(document.getElementById('frameMap').src,'static','false');
-		}
 
-		switcher= switcher===0? 1 : 0;
+	$scope.resetArd = function(){
+		var url=document.getElementById('frameMap').src;
+		//only refresh if url has changed
+		if(url!=updateUrl(url,'refine.arrdt')){
+			document.getElementById('frameMap').src=updateUrl(url,'refine.arrdt');
+		$scope.ard='';
+	}
+}
+
+$scope.enableZoom = function(){
+
+	if (switcher===1) {
+		document.getElementById('frameMap').src=updateUrl(document.getElementById('frameMap').src,'static','true');
+	} else{
+		document.getElementById('frameMap').src=updateUrl(document.getElementById('frameMap').src,'static','false');
 	}
 
+	switcher= switcher===0? 1 : 0;
+}
+
     // listener for arondissement filter
-    $scope.$watch('ard', function(newVal, oldVal){
-    	console.log("Search was changed to:"+newVal);
+    $scope.$watch('ard', function(){
+    	console.log(" change listened")
     	setArd($scope.ard);
     });
 
