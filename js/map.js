@@ -8,19 +8,33 @@ var switcher=0;
 app1.controller("switchButtons",['$scope', function($scope){
 	
 	$scope.enableZoom= function(){
-		console.log(switcher);
+			
 		if (switcher===1) {
 			document.getElementById('frameMap').src=updateUrl(document.getElementById('frameMap').src,'static','true');
 		} else{
 			document.getElementById('frameMap').src=updateUrl(document.getElementById('frameMap').src,'static','false');
-
 		}
 
 		switcher= switcher===0? 1 : 0;
 	}
 
+    // listener for arondissement filter
+    $scope.$watch('ard', function(newVal, oldVal){
+    	console.log("Search was changed to:"+newVal);
+    	setArd($scope.ard);
+    });
+
 }]);
 
+
+
+
+// filters arondissement
+function setArd(val){
+	if(val>0 && val<=20){
+		document.getElementById('frameMap').src=updateUrl(document.getElementById('frameMap').src,'refine.arrdt',val);
+	}
+}
 
 
 

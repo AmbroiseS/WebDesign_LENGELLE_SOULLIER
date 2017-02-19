@@ -109,13 +109,12 @@
 			
 			<iframe id="frameMap" src="https://opendata.paris.fr/explore/embed/dataset/reseau-cyclable/map/?disjunctive.arrdt&disjunctive.statut&disjunctive.typologie&disjunctive.sens_velo&location=12,48.86042,2.35348&static=true&datasetcard=false" width="100%"" height="400" frameborder="0"></iframe>
 
-<!--&refine.arrdt=12-->
 		</div>
 
 		<div class="col-md-3" >
 			
 			<p>Choisir Arrondissement: 
-				<input type="number" min="1" max="20" ng-model="ard">
+				<input name="ard" type="number" min="1" max="20" ng-minlength="1" ng-maxlength="20" ng-model="ard">
 			</p>
 		</div>
 	</div>
