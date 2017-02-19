@@ -15,6 +15,9 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script type="text/javascript" src="js/map.js"></script>
+
 </head>
 
 
@@ -61,7 +64,7 @@
 				<p>      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor justo nibh, id lacinia nisl faucibus non. Quisque eros enim, cursus id orci vitae, volutpat euismod turpis. Aliquam elementum sem eget condimentum dictum. Nam posuere neque consequat porta aliquam. Donec tristique sem nec velit ullamcorper placerat. Aenean et nibh placerat mi interdum sagittis sagittis eget purus. Pellentesque tempus eleifend lorem at venenatis. Aenean enim libero, commodo ut blandit in, sagittis at enim. Maecenas eu diam nec nunc scelerisque aliquam in ac risus. Fusce sodales, dui at tincidunt vehicula, nisl felis condimentum massa, non sagittis justo justo vitae felis. Cras feugiat a metus et interdum. In hac habitasse platea dictumst. Nulla fermentum tellus ante, iaculis placerat tellus ultricies ornare. In mattis laoreet bibendum.</p> 
 
 				<p> TODO add button reset</p> 
-				<p> add buton center</p> 
+				<p> add buton center ADD station de vélib??</p> 
 
 			</div>
 		</div>
@@ -75,7 +78,7 @@
 
 	<!-- Map Integration -->
 
-	<div class="row">
+	<div class="row" ng-controller="switchButtons">
 		<div class="col-md-3">
 
 			<!-- Default panel contents -->
@@ -84,16 +87,16 @@
 			<!-- List group -->
 			<ul class="list-group">
 				<li class="list-group-item">
-					Bootstrap Switch Default
+					Autoriser Zoom et Panning
 					<div class="material-switch pull-right">
-						<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+						<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox" ng-model="ifValue"/>
 						<label for="someSwitchOptionDefault" class="label-default"></label>
 					</div>
 				</li>
 				<li class="list-group-item">
 					Bootstrap Switch Primary
 					<div class="material-switch pull-right">
-						<input id="someSwitchOptionPrimary" name="someSwitchOption001" type="checkbox"/>
+						<input id="someSwitchOptionPrimary" name="someSwitchOption001" type="checkbox" ng-model="showVideo"/>
 						<label for="someSwitchOptionPrimary" class="label-primary"></label>
 					</div>
 				</li>
@@ -131,8 +134,12 @@
 
 		</div>
 
-		<div class="col-md-6">
-			<iframe src="https://opendata.paris.fr/explore/embed/dataset/reseau-cyclable/map/?disjunctive.arrdt&disjunctive.statut&disjunctive.typologie&disjunctive.sens_velo&location=12,48.86042,2.35348&static=false&datasetcard=false" width="100%"" height="350" frameborder="0"></iframe>
+		<div class="col-md-6"  >
+			
+			<iframe ng-if="hideIf()" src="https://opendata.paris.fr/explore/embed/dataset/reseau-cyclable/map/?disjunctive.arrdt&disjunctive.statut&disjunctive.typologie&disjunctive.sens_velo&location=12,48.86042,2.35348&static=true&datasetcard=false" width="100%"" height="400" frameborder="0"></iframe>
+
+			<iframe ng-if="showIf()" src="https://opendata.paris.fr/explore/embed/dataset/reseau-cyclable/map/?disjunctive.arrdt&disjunctive.statut&disjunctive.typologie&disjunctive.sens_velo&location=12,48.86042,2.35348&static=false&datasetcard=false" width="100%"" height="400" frameborder="0"></iframe>
+
 		</div>
 
 		<div class="col-md-3" ng-controller="ardFilter">
@@ -142,7 +149,6 @@
 			</p>
 		</div>
 	</div>
-
 
 
 
