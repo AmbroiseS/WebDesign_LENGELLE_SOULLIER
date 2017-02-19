@@ -89,60 +89,30 @@
 				<li class="list-group-item">
 					Autoriser Zoom et Panning
 					<div class="material-switch pull-right">
-						<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox" ng-model="ifValue"/>
+						<input id="someSwitchOptionDefault" type="checkbox" ng-click="enableZoom()"/>
 						<label for="someSwitchOptionDefault" class="label-default"></label>
 					</div>
 				</li>
 				<li class="list-group-item">
 					Bootstrap Switch Primary
 					<div class="material-switch pull-right">
-						<input id="someSwitchOptionPrimary" name="someSwitchOption001" type="checkbox" ng-model="showVideo"/>
+						<input id="someSwitchOptionPrimary" name="someSwitchOption001" type="checkbox" />
 						<label for="someSwitchOptionPrimary" class="label-primary"></label>
-					</div>
-				</li>
-				<li class="list-group-item">
-					Bootstrap Switch Success
-					<div class="material-switch pull-right">
-						<input id="someSwitchOptionSuccess" name="someSwitchOption001" type="checkbox"/>
-						<label for="someSwitchOptionSuccess" class="label-success"></label>
-					</div>
-				</li>
-				<li class="list-group-item">
-					Bootstrap Switch Info
-					<div class="material-switch pull-right">
-						<input id="someSwitchOptionInfo" name="someSwitchOption001" type="checkbox"/>
-						<label for="someSwitchOptionInfo" class="label-info"></label>
-					</div>
-				</li>
-				<li class="list-group-item">
-					Bootstrap Switch Warning
-					<div class="material-switch pull-right">
-						<input id="someSwitchOptionWarning" name="someSwitchOption001" type="checkbox"/>
-						<label for="someSwitchOptionWarning" class="label-warning"></label>
-					</div>
-				</li>
-				<li class="list-group-item">
-					Bootstrap Switch Danger
-					<div class="material-switch pull-right">
-						<input id="someSwitchOptionDanger" name="someSwitchOption001" type="checkbox"/>
-						<label for="someSwitchOptionDanger" class="label-danger"></label>
 					</div>
 				</li>
 			</ul>
 
 
-
 		</div>
 
-		<div class="col-md-6"  >
+		<div class="col-md-6" >
 			
-			<iframe ng-if="hideIf()" src="https://opendata.paris.fr/explore/embed/dataset/reseau-cyclable/map/?disjunctive.arrdt&disjunctive.statut&disjunctive.typologie&disjunctive.sens_velo&location=12,48.86042,2.35348&static=true&datasetcard=false" width="100%"" height="400" frameborder="0"></iframe>
+			<iframe id="frameMap" src="https://opendata.paris.fr/explore/embed/dataset/reseau-cyclable/map/?disjunctive.arrdt&disjunctive.statut&disjunctive.typologie&disjunctive.sens_velo&location=12,48.86042,2.35348&static=true&datasetcard=false" width="100%"" height="400" frameborder="0"></iframe>
 
-			<iframe ng-if="showIf()" src="https://opendata.paris.fr/explore/embed/dataset/reseau-cyclable/map/?disjunctive.arrdt&disjunctive.statut&disjunctive.typologie&disjunctive.sens_velo&location=12,48.86042,2.35348&static=false&datasetcard=false" width="100%"" height="400" frameborder="0"></iframe>
-
+<!--&refine.arrdt=12-->
 		</div>
 
-		<div class="col-md-3" ng-controller="ardFilter">
+		<div class="col-md-3" >
 			
 			<p>Choisir Arrondissement: 
 				<input type="number" min="1" max="20" ng-model="ard">
