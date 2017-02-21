@@ -1,6 +1,7 @@
 var app1=angular.module("mapApp",[])
 
 var switcher=0;
+var switcher1=0;
 
 
 
@@ -8,9 +9,19 @@ var switcher=0;
 app1.controller("switchButtons",['$scope', function($scope){
 
 
+	$scope.manageFilters= function(){
+		if(switcher1){
+			document.getElementById('frameMap').src=document.getElementById('frameMap').src.replace('&refine.statut=VOIE%20'+15, '');
+			document.getElementById('frameMap').src=document.getElementById('frameMap').src.replace('&refine.statut=VOIE%20'+30, '');
+			document.getElementById('frameMap').src=document.getElementById('frameMap').src.replace('&refine.statut=VOIE%20'+50, '');
+		}
+		switcher1=switcher1===1? 0:1;
+
+
+	}
+
 	$scope.setFilter = function(val){
-		console.log("bla");
-		
+		//remove or add specific speed filter		
 		if (document.getElementById('frameMap').src.includes('&refine.statut=VOIE%20'+val) ){
 			document.getElementById('frameMap').src=document.getElementById('frameMap').src.replace('&refine.statut=VOIE%20'+val, '');
 		}
