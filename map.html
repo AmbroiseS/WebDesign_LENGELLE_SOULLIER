@@ -81,10 +81,10 @@
 		<div class="col-md-3">
 
 			<!-- Default panel contents -->
-			<div class="panel-heading" text-align="center">Filter Stuff</div>
+			<div class="panel-heading" text-align="center">Réglages</div>
 
 			<!-- List group -->
-			<ul class="list-group">
+			<ul class="list-group clearfix">
 				<li class="list-group-item">
 					Autoriser Zoom et Panning
 					<div class="material-switch pull-right">
@@ -99,13 +99,17 @@
 						<label for="someSwitchOptionPrimary" class="label-primary"></label>
 					</div>
 				</li>
+				<li class="list-group-item">
+					Arrondissement: 
+					<input id="form-ard" class="form-control ardIn" name="ard" type="number" min="1" max="20" ng-minlength="1" ng-maxlength="20" ng-model="ard">
+					<button type="button" class="btn btn-default ardIn" ng-click="resetArd()">
+						<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+					</button>
+				</li>
 			</ul>
 
-			<form class="form-inline hidden-xs">Arrondissement: 
-				<input id="form-ard" class="form-control" name="ard" type="number" min="1" max="20" ng-minlength="1" ng-maxlength="20" ng-model="ard">
-				<button type="button" class="btn btn-default" ng-click="resetArd()">
-					<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
-				</button>
+			<form id="form" class="form-inline hidden-xs">
+
 			</form>
 
 
@@ -121,7 +125,7 @@
 		<div class="col-md-3" >
 
 			<form ng-if="displaySpeedFilter">
-			Filtrer par type de voie:
+				Filtrer par type de voie:
 				<div class="funkyradio">
 					<div class="funkyradio-primary">
 						<input type="checkbox"  id="checkbox0" ng-click="setFilter(50)" />

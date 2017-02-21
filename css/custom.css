@@ -53,3 +53,8 @@ iframe
 {
   width: 70px !important;
 }
+
+.ardIn{
+  display: inline-block;
+  text-align: right;
+}
