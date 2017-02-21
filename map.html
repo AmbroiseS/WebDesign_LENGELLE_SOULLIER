@@ -10,9 +10,8 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/custom.css">
 	<link rel="stylesheet" type="text/css" href="css/material_switch.css">
+	<link rel="stylesheet" type="text/css" href="css/radio_buttons2.css">
 	
-
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
@@ -90,17 +89,25 @@
 					Autoriser Zoom et Panning
 					<div class="material-switch pull-right">
 						<input id="someSwitchOptionDefault" type="checkbox" ng-click="enableZoom()"/>
-						<label for="someSwitchOptionDefault" class="label-default"></label>
+						<label for="someSwitchOptionDefault" class="label-primary"></label>
 					</div>
 				</li>
 				<li class="list-group-item">
-					Bootstrap Switch Primary
+					Afficher filtres de vitesse
 					<div class="material-switch pull-right">
-						<input id="someSwitchOptionPrimary" name="someSwitchOption001" type="checkbox" />
+						<input id="someSwitchOptionPrimary"  type="checkbox" ng-model="displaySpeedFilter"/>
 						<label for="someSwitchOptionPrimary" class="label-primary"></label>
 					</div>
 				</li>
 			</ul>
+
+			<form class="form-inline">Arrondissement: 
+				<input id="form-ard" class="form-control" name="ard" type="number" min="1" max="20" ng-minlength="1" ng-maxlength="20" ng-model="ard">
+				<button type="button" class="btn btn-default" ng-click="resetArd()">
+					<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+				</button>
+			</form>
+
 
 
 		</div>
@@ -113,17 +120,36 @@
 
 		<div class="col-md-3" >
 			
-			<form class="form-inline">Arrondissement: 
-				<input id="form-ard" class="form-control" name="ard" type="number" min="1" max="20" ng-minlength="1" ng-maxlength="20" ng-model="ard">
-				<button type="button" class="btn btn-default" ng-click="resetArd()">
-					<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
-				</button>
+
+
+			<form ng-if="displaySpeedFilter">
+			Filtrer par type de voie:
+				<div class="funkyradio">
+					<div class="funkyradio-primary">
+						<input type="checkbox"  id="checkbox0" checked/>
+						<label for="checkbox0">Voie 50</label>
+					</div>
+					<div class="funkyradio-primary">
+						<input type="checkbox"  id="checkbox1" checked/>
+						<label for="checkbox1">Voie 30</label>
+					</div>
+					<div class="funkyradio-primary">
+						<input type="checkbox"  id="checkbox2" checked/>
+						<label for="checkbox2">Voie 15</label>
+					</div>
+					<div class="funkyradio-primary">
+						<input type="checkbox"  id="checkbox3" checked/>
+						<label for="checkbox3">Aire piétonne</label>
+					</div>
+
+				</div>
 			</form>
+
 			
 		</div>
-	</div>
 
 
 
-</body>
-</html>
+
+	</body>
+	</html>
