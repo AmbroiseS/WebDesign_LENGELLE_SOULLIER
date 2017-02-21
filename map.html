@@ -119,26 +119,24 @@
 		</div>
 
 		<div class="col-md-3" >
-			
-
 
 			<form ng-if="displaySpeedFilter">
 			Filtrer par type de voie:
 				<div class="funkyradio">
 					<div class="funkyradio-primary">
-						<input type="checkbox"  id="checkbox0" checked/>
+						<input type="checkbox"  id="checkbox0" ng-click="setFilter(50)" />
 						<label for="checkbox0">Voie 50</label>
 					</div>
 					<div class="funkyradio-primary">
-						<input type="checkbox"  id="checkbox1" checked/>
+						<input type="checkbox"  id="checkbox1" ng-click="setFilter(30)" />
 						<label for="checkbox1">Voie 30</label>
 					</div>
 					<div class="funkyradio-primary">
-						<input type="checkbox"  id="checkbox2" checked/>
+						<input type="checkbox"  id="checkbox2" ng-click="setFilter(15)"/>
 						<label for="checkbox2">Voie 15</label>
 					</div>
 					<div class="funkyradio-primary">
-						<input type="checkbox"  id="checkbox3" checked/>
+						<input type="checkbox"  id="checkbox3" ng-click="setFilterPedestrian()" />
 						<label for="checkbox3">Aire piétonne</label>
 					</div>
 

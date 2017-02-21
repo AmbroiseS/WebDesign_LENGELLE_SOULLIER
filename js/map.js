@@ -7,25 +7,49 @@ var switcher=0;
 
 app1.controller("switchButtons",['$scope', function($scope){
 
+
+	$scope.setFilter = function(val){
+		console.log("bla");
+		
+		if (document.getElementById('frameMap').src.includes('&refine.statut=VOIE%20'+val) ){
+			document.getElementById('frameMap').src=document.getElementById('frameMap').src.replace('&refine.statut=VOIE%20'+val, '');
+		}
+		else {
+			document.getElementById('frameMap').src=document.getElementById('frameMap').src+'&refine.statut=VOIE%20'+val;
+		}
+
+	}
+
+	$scope.setFilterPedestrian = function(){
+		if (document.getElementById('frameMap').src.includes('&refine.statut=AIRE%20PIETONNE&refine.statut=ZONE%20DE%20RENCONTRE') ){
+			document.getElementById('frameMap').src=document.getElementById('frameMap').src.replace('&refine.statut=AIRE%20PIETONNE&refine.statut=ZONE%20DE%20RENCONTRE', '');
+		}
+		else {
+			document.getElementById('frameMap').src=document.getElementById('frameMap').src+'&refine.statut=AIRE%20PIETONNE&refine.statut=ZONE%20DE%20RENCONTRE';
+		}
+	}
+
+
+
 	$scope.resetArd = function(){
 		var url=document.getElementById('frameMap').src;
 		//only refresh if url has changed
 		if(url!=updateUrl(url,'refine.arrdt')){
 			document.getElementById('frameMap').src=updateUrl(url,'refine.arrdt');
-		$scope.ard='';
-	}
-}
-
-$scope.enableZoom = function(){
-
-	if (switcher===1) {
-		document.getElementById('frameMap').src=updateUrl(document.getElementById('frameMap').src,'static','true');
-	} else{
-		document.getElementById('frameMap').src=updateUrl(document.getElementById('frameMap').src,'static','false');
+			$scope.ard='';
+		}
 	}
 
-	switcher= switcher===0? 1 : 0;
-}
+	$scope.enableZoom = function(){
+
+		if (switcher===1) {
+			document.getElementById('frameMap').src=updateUrl(document.getElementById('frameMap').src,'static','true');
+		} else{
+			document.getElementById('frameMap').src=updateUrl(document.getElementById('frameMap').src,'static','false');
+		}
+
+		switcher= switcher===0? 1 : 0;
+	}
 
     // listener for arondissement filter
     $scope.$watch('ard', function(){
@@ -44,6 +68,7 @@ function setArd(val){
 		document.getElementById('frameMap').src=updateUrl(document.getElementById('frameMap').src,'refine.arrdt',val);
 	}
 }
+
 
 
 
