@@ -10,10 +10,13 @@ app1.controller("switchButtons",['$scope', function($scope){
 
 
 	$scope.manageFilters= function(){
+		//remove all filters if switch is turned off
 		if(switcher1){
 			document.getElementById('frameMap').src=document.getElementById('frameMap').src.replace('&refine.statut=VOIE%20'+15, '');
 			document.getElementById('frameMap').src=document.getElementById('frameMap').src.replace('&refine.statut=VOIE%20'+30, '');
 			document.getElementById('frameMap').src=document.getElementById('frameMap').src.replace('&refine.statut=VOIE%20'+50, '');
+			document.getElementById('frameMap').src=
+			document.getElementById('frameMap').src.replace('&refine.statut=AIRE%20PIETONNE&refine.statut=ZONE%20DE%20RENCONTRE', '');
 		}
 		switcher1=switcher1===1? 0:1;
 
