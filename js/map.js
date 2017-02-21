@@ -40,7 +40,7 @@ $scope.enableZoom = function(){
 
 // filters arondissement
 function setArd(val){
-	if(val>0 && val<=20){
+	if(val>0 && val<=20 && Number.isInteger(val)){
 		document.getElementById('frameMap').src=updateUrl(document.getElementById('frameMap').src,'refine.arrdt',val);
 	}
 }
