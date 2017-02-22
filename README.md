@@ -1,4 +1,4 @@
-# Voies Cyclables
+﻿# Voies Cyclables
 Description rapide du site
 **Testé sur Chrome Seulement**
 ## Fonctionnalités implémentées
@@ -17,6 +17,7 @@ Description rapide du site
   * ngModel
   * ngIf
   * ngClick
+
 ## Fonctionnalitées non implémentées
 * Classes non utilisées
   * ngClass
