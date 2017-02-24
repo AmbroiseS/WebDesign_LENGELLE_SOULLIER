@@ -12,9 +12,16 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/angular.chartjs/latest/angular-chart.min.js"></script>
+	<script type="text/javascript" src="js/stats.js"></script>
+
+
 </head>
 
-<body>
+<body ng-app="statsApp">
 
 	<!--NavBar -->
 	<nav class="navbar navbar-inverse">
@@ -22,7 +29,7 @@
 
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header page-scroll">
-			<a href="index.html" class="navbar-brand" id="logo"><img src="ressources/pictures/logo/logo2mini.png"</a>
+				<a href="index.html" class="navbar-brand" id="logo"><img src="ressources/pictures/logo/logo2mini.png"</a>
 				<a class="navbar-brand" href="index.html" >Cycle à Paris</a>
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 					<span class="sr-only">Toggle navigation</span>
@@ -46,9 +53,19 @@
 		</div>
 	</nav>
 
-	<div class="container_title">
+	<div class="container_title" ng-controller="ctrChart">
 		<h1>Les Voies Cyclables à Paris</h1>
 
 
 		<p>This is some text.</p> 
-	</div>
+
+		<canvas id="line" class="chart chart-line" chart-data="data"
+		chart-labels="labels" chart-series="series" chart-options="options"
+		chart-dataset-override="datasetOverride" chart-click="onClick">
+	</canvas>
+
+
+</div>
+
+</body>
+</html>
