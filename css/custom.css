@@ -62,3 +62,8 @@ iframe
 .bold{
   font-weight:  bold;
 }
+
+canvas
+{
+  padding: 30px;
+}
