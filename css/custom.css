@@ -58,3 +58,7 @@ iframe
   display: inline-block;
   text-align: right;
 }
+
+.bold{
+  font-weight:  bold;
+}
