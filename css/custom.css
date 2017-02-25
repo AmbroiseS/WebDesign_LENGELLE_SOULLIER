@@ -63,7 +63,25 @@ iframe
   font-weight:  bold;
 }
 
-canvas
-{
-  padding: 30px;
+
+
+
+
+
+@media (max-width: 767px) {
+
+  .canvasContainer{
+    
+  }
 }
+
+@media (min-width: 767px){
+  .canvasContainer
+  {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+  }
+
+}
+
