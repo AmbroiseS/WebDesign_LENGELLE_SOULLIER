@@ -58,7 +58,7 @@
 	</nav>
 
 
-	<div class="container_title" ng-controller="ctrChart" ng_init="getItems()" ng-model="items">
+	<div class="container_title" ng-controller="ctrChart" ng_init="getPieDataForArdt(1)" ng-model="items">
 		<div class="row">
 			<div class="col-lg-2">
 				<div class="row">
@@ -76,7 +76,7 @@
 				<div>
 					<div class="btn-group ardtRadio" >
 						<label ng-repeat="filter in filters" class="btn btn-primary active">
-							<input type="radio" name="options" id="option1" ng-model="radio.value" ng-value="filter[1]" >{{filter[1]}} 
+							<input type="radio" name="options" id="option1" ng-model="radio.value" ng-click="getPieDataForArdt(radio.value)" ng-value="filter[1]" >{{filter[1]}} 
 						</label>
 
 					</div>

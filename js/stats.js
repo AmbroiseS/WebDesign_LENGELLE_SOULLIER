@@ -17,31 +17,39 @@ app2.controller("ctrChart", function ($scope,$http) {
   value: 1
 };
 
+$scope.var50=5;
+$scope.var30=5;
 
 
-$scope.labelsPie = ["Download Sales", "In-Store Sales", "Mail-Order Sales"];
-$scope.dataPie = [300, 500, 100];
-
-$scope.items = []
-
-
-$scope.getItems = function() { 
+$scope.getPieDataForArdt = function (ardt){
   $http({
-    method: 'GET',
-    url: 'https://opendata.paris.fr/api/records/1.0/search/?dataset=reseau-cyclable&rows=20&facet=arrdt&facet=statut&facet=typologie&facet=sens_velo'
+    method: 'GET',    
+    url: 'https://opendata.paris.fr/api/records/1.0/search/?dataset=reseau-cyclable&rows=1000&facet=arrdt&facet=statut&facet=typologie&facet=sens_velo&refine.statut=VOIE+50&refine.arrdt='+ardt
+
   }).then(function successCallback(response) {
-    $scope.items=response.data;
-    console.log($scope.items.records);
-    // this callback will be called asynchronously
-    // when the response is available
-  }, function errorCallback(response) {
-    // called asynchronously if an error occurs
-    // or server returns response with an error status.
+    $scope.var50=response.data.records.length;
   });
+  $http({
+    method: 'GET',    
+    url: 'https://opendata.paris.fr/api/records/1.0/search/?dataset=reseau-cyclable&rows=1000&facet=arrdt&facet=statut&facet=typologie&facet=sens_velo&refine.statut=VOIE+30&refine.arrdt='+ardt
+
+  }).then(function successCallback(response) {
+    $scope.var30=response.data.records.length;
+    console.log("pie func" +$scope.var30+" "+ $scope.var50);
+  });
+
+
+
+
+  $scope.labelsPie = ["Voies 50", "Voies 30"];
+  $scope.dataPie = [$scope.var50, $scope.var30];
+
 }
 
-
 });
+
+
+
 
 
 
