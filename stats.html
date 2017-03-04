@@ -10,18 +10,22 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/custom.css">
 
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/angular.chartjs/latest/angular-chart.min.js"></script>
+
+
 	<script type="text/javascript" src="js/stats.js"></script>
 
 
 </head>
 
 <body ng-app="statsApp">
+
 
 	<!--NavBar -->
 	<nav class="navbar navbar-inverse">
@@ -53,11 +57,18 @@
 		</div>
 	</nav>
 
+
 	<div class="container_title" ng-controller="ctrChart">
 		<div class="row">
 			<div class="col-lg-2">
 				<div class="row">
-					<aside class="col-sm-3 hidden-xs">
+					<aside class="col-sm-3 hidden-xs" >
+
+						<div ng_init="getItems()" ng-model="items">
+
+
+						</div>
+
 						
 
 						
@@ -76,6 +87,25 @@
 
 
 				<p>This is some text.</p> 
+
+
+
+				
+
+				<div>
+
+					<div class="btn-group" >
+						<label ng-repeat="filter in filters" class="btn btn-primary active">
+							<input type="radio" name="options" id="option1" ng-model="radio.value" ng-value="filter[1]" >{{filter[1]}} 
+						</label>
+
+					</div>
+
+					<pre>{{radio.value}}</pre>
+				</div>
+
+
+
 
 				<div class="panel-group" id="accordion">
 
@@ -155,6 +185,10 @@
 
 						</div>
 					</div>
+				</div>
+			</a>
+		</div>
+	</div>
 
-				</body>
-				</html>
+</body>
+</html>
