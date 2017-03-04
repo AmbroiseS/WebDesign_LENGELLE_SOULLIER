@@ -64,14 +64,10 @@ iframe
 }
 
 
-
-
-
-
 @media (max-width: 767px) {
 
   .canvasContainer{
-    
+
   }
 }
 
@@ -85,3 +81,10 @@ iframe
 
 }
 
+pre{
+  margin: auto;
+  width: 150px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+
+}

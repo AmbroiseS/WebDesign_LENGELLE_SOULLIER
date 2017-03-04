@@ -13,48 +13,14 @@ app2.controller("ctrChart", function ($scope,$http) {
 
  ];
 
-
  $scope.radio = {
   value: 1
 };
 
 
 
-
-$scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
-$scope.series = ['Series A', 'Series B'];
-$scope.data = [
-[65, 59, 80, 81, 56, 55, 40],
-[28, 48, 40, 19, 86, 27, 90]
-];
-$scope.onClick = function (points, evt) {
-  console.log(points, evt);
-};
-$scope.datasetOverride = [{ yAxisID: 'y-axis-1' }, { yAxisID: 'y-axis-2' }];
-$scope.options = {
-  scales: {
-    yAxes: [
-    {
-      id: 'y-axis-1',
-      type: 'linear',
-      display: true,
-      position: 'left'
-    },
-    {
-      id: 'y-axis-2',
-      type: 'linear',
-      display: true,
-      position: 'right'
-    }
-    ]
-  }
-};
-
-
 $scope.labelsPie = ["Download Sales", "In-Store Sales", "Mail-Order Sales"];
 $scope.dataPie = [300, 500, 100];
-
-$scope.arr=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
 
 $scope.items = []
 
@@ -76,22 +42,6 @@ $scope.getItems = function() {
 
 
 });
-
-
-/*
-angular
-.module('demoApp', ['mobiscroll-select'])
-.controller('demoController', ['$scope', function ($scope) {
-
-  $scope.settings = {
-    theme: 'material',
-    display: 'center',
-    minWidth: 200
-  };
-
-
-}]);
-*/
 
 
 
