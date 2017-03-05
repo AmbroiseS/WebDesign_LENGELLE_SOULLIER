@@ -12,16 +12,19 @@ Description rapide du site
   * js
   * css
   * ressources
-* Filtres personnalisés
+* Filtres personnalisés de vitesse et arrondissements
 * Utilisation des classes AngularJS
   * ngModel
   * ngIf
   * ngClick
+  * ngRepeat
+  * ngInit
 
 ## Fonctionnalitées non implémentées
 * Classes non utilisées
   * ngClass
-  * ngRepeat
 
 ## Fonctionnalitées bonus
 * Utilisation d'un listener en js
+* Implémentation de Angular Chart basé sur Chart.js
+* Utilisation de l'API openData pour récupérer des objets dans un JSON
