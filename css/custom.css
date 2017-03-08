@@ -28,11 +28,28 @@
 
 /*Else*/
 
+.source
+{
+  text-align: right;
+  font-style: italic;
+}
+
 p
 {
+  font-family: Verdana, sans-serif;
   text-align: justify;
 }
 
+@font-face {
+  font-family: 'GeosansLight';
+  src: url('GeosansLight.ttf') format('truetype');
+}
+
+h1
+{
+  font-family: 'GeosansLight', Arial, serif;
+  font-weight: bold;
+}
 html, body {
   max-width: 100%;
   overflow-x: hidden;
