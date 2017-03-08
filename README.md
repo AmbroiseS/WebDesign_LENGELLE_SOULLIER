@@ -1,5 +1,5 @@
 ﻿# Voies Cyclables
-Description rapide du site
+Ce site internet rend compte de la répartitions des différentes voies cyclables présentes à Paris à travers une carte interactive ainsi que des diagrammes circulaires.<br/>
 **Testé sur Chrome Seulement**
 ## Fonctionnalités implémentées
 * Design classique et efficace
@@ -28,3 +28,6 @@ Description rapide du site
 * Utilisation d'un listener en js
 * Implémentation de Angular Chart basé sur Chart.js
 * Utilisation de l'API openData pour récupérer des objets dans un JSON
+
+<br/>
+Lien: https://ambroises.github.io/WebDesign_LENGELLE_SOULLIER/
