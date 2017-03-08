@@ -2,7 +2,7 @@
 Ce site internet rend compte de la répartitions des différentes voies cyclables présentes à Paris à travers une carte interactive ainsi que des diagrammes circulaires.<br/>
 **Testé sur Chrome Seulement**
 ## Fonctionnalités implémentées
-* Design classique et efficace
+* Design efficace
 * Responsive design
   * Utilisation de Bootstrap
   * Menu "hamburger" sur mobile
