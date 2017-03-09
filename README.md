@@ -30,4 +30,4 @@ Ce site internet rend compte de la répartitions des différentes voies cyclable
 * Utilisation de l'API openData pour récupérer des objets dans un JSON
 
 <br/>
-Lien: https://ambroises.github.io/WebDesign_LENGELLE_SOULLIER/
+Lien: https://ambroises.github.io/
